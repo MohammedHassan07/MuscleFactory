@@ -111,3 +111,17 @@ btnPhone.addEventListener('click', () => {
     const phoneNumber = document.getElementById('phone-number')
     window.open(`tel:${phoneNumber}`, '_self');
 })
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Hide button when at the top
+window.addEventListener('scroll', function () {
+    const button = document.querySelector('.back-to-top');
+    if (window.scrollY > 300) {
+        button.style.opacity = "1";
+    } else {
+        button.style.opacity = "0";
+    }
+});
