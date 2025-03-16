@@ -108,7 +108,7 @@ contactForm.addEventListener('submit', (e) => {
 const btnPhone = document.getElementById('phone')
 btnPhone.addEventListener('click', () => {
 
-    const phoneNumber = document.getElementById('phone-number')
+    const phoneNumber = document.getElementById('phone-number').innerText
     window.open(`tel:${phoneNumber}`, '_self');
 })
 
