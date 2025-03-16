@@ -104,3 +104,10 @@ contactForm.addEventListener('submit', (e) => {
     alert('Thank you for your message! We will get back to you soon.');
     contactForm.reset();
 });
+
+const btnPhone = document.getElementById('phone')
+btnPhone.addEventListener('click', () => {
+
+    const phoneNumber = document.getElementById('phone-number')
+    window.open(`tel:${phoneNumber}`, '_self');
+})
