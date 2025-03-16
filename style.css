@@ -9,6 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    overflow-x: hidden;
 }
 
 .flex {
@@ -312,15 +313,33 @@ body {
 /* Map Container */
 .map-container {
     width: 95vw;
-    margin-top: 4rem;
+    max-width: 1200px;
+    margin: 4rem auto;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+@media (max-width: 1024px) {
+    .map-container {
+        margin-top: 3rem;
+    }
+
+    .map-container iframe {
+        height: 400px;
+    }
 }
 
 @media (max-width: 768px) {
     .map-container {
         margin-top: 2rem;
+        width: 90vw;
     }
 
     .map-container iframe {
@@ -328,6 +347,11 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .map-container iframe {
+        height: 250px;
+    }
+}
 /* Icons */
 .icon-location::before {
     content: "📍";
@@ -339,4 +363,22 @@ body {
 
 .icon-mail::before {
     content: "📧";
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
