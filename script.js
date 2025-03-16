@@ -110,6 +110,7 @@ btnPhone.addEventListener('click', () => {
 
     const phoneNumber = document.getElementById('phone-number').innerText
     window.open(`tel:${phoneNumber}`, '_self');
+    // console.log(phoneNumber)
 })
 
 function scrollToTop() {
